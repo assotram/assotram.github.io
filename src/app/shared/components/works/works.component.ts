@@ -46,23 +46,8 @@ export class WorksComponent implements OnInit {
 
   ngOnInit(): void {
     this.http.get<{ events: Event[] }>(this.url).subscribe(({ events }) => {
-      // this.events = events;
-      // this.wheel.updateLength(events);
-
-      const event = events[0];
-      for (let i = 0; i < 10; i++) {
-        this.events.push({
-          id: i.toString(),
-          title: event.title,
-          date: event.date,
-          pictures: event.pictures,
-          context: event.context,
-          tag: event.tag,
-        });
-      }
-
-      this.style = this.wheel.update(this.events, this.main.nativeElement);
-      // this.style = this.wheel.update(events);
+      this.events = events;
+      this.style = this.wheel.update(events);
     });
   }
 
