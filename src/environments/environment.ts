@@ -1,3 +1,3 @@
 export const environment = {
-  base_url: 'https://biamaxine.github.io/assotr.am_json/src/',
+  base_url: 'https://assotram.github.io/assotr.am_json/src/',
 };
